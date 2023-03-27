@@ -1,0 +1,64 @@
+﻿@model IEnumerable<UserIDPAssword.Models.Admin>
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            Leave Request
+        </th>
+
+    </tr>
+
+
+    <tr>
+
+        <td>
+            @Session["username"]
+        </td>
+        <td>
+            <input type="submit" value="Request" id="leave" class="btn btn-primary" />
+        </td>
+
+    </tr>
+
+
+</table>
+
+
+
+
+@section Scripts{
+
+    <script type="text/javascript">
+        $(function () {
+            $("#leave").click(function () {
+
+                toastr.success("Add Data Successfully", "Toastr");
+
+            });
+            $("#toastrupdate").click(function () {
+
+                toastr.warning("Update Data Successfully", "Toastr");
+            });
+            $("#toastrdelete").click(function () {
+
+                toastr.danger("Data Deleted Successfully", "Toastr");
+            });
+            $("#toastrdetails").click(function () {
+
+                toastr.info("Details", "Toastr");
+            });
+        });
+
+    </script>
+
+
+}
+
